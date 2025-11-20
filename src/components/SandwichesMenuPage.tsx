@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import marbleBackground from '@/assets/e8c55b93e0d869d9cf6f0b40ec93b03f75c0c46f.png';
+import marbleBackground from '@/assets/marble-background.png';
 import logoImage from '@/assets/52cce948fd81271b938df7f4433f2c3af4c2725c.png';
 import { ImageWithFallback } from './shared/ImageWithFallback';
 
@@ -84,7 +84,9 @@ export function SandwichesMenuPage() {
         style={{
           backgroundImage: `url(${marbleBackground})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          zIndex: 0
         }}
       />
 
@@ -94,11 +96,20 @@ export function SandwichesMenuPage() {
         <div className="px-16 pt-8 pb-3">
           {/* Logo */}
           <div className="flex justify-center mb-4">
-            <img 
-              src={logoImage} 
-              alt="Nostrano" 
-              className="h-14"
-            />
+            <div style={{ 
+              background: 'white',
+              mixBlendMode: 'multiply',
+              display: 'inline-block'
+            }}>
+              <img 
+                src={logoImage} 
+                alt="Nostrano" 
+                className="h-14"
+                style={{ 
+                  display: 'block'
+                }}
+              />
+            </div>
           </div>
 
           {/* Main Heading */}

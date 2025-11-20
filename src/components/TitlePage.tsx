@@ -1,5 +1,5 @@
 import logoImage from '@/assets/52cce948fd81271b938df7f4433f2c3af4c2725c.png';
-import marbleBackground from '@/assets/e8c55b93e0d869d9cf6f0b40ec93b03f75c0c46f.png';
+import marbleBackground from '@/assets/marble-background.png';
 
 export function TitlePage() {
   return (
@@ -10,18 +10,27 @@ export function TitlePage() {
         style={{
           backgroundImage: `url(${marbleBackground})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          zIndex: 0
         }}
       />
 
       {/* Content */}
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-16 pt-12 pb-20">
         {/* Logo */}
-        <div className="mb-12">
+        <div className="mb-12" style={{ 
+          background: 'white',
+          mixBlendMode: 'multiply',
+          display: 'inline-block'
+        }}>
           <img 
             src={logoImage} 
             alt="Nostrano - Culinary Redefined" 
             className="w-96 h-auto"
+            style={{ 
+              display: 'block'
+            }}
           />
         </div>
 

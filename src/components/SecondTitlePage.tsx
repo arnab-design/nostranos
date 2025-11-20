@@ -1,5 +1,5 @@
 import logoImage from '@/assets/52cce948fd81271b938df7f4433f2c3af4c2725c.png';
-import marbleBackground from '@/assets/e8c55b93e0d869d9cf6f0b40ec93b03f75c0c46f.png';
+import marbleBackground from '@/assets/marble-background.png';
 import appetizerSpread from '@/assets/90d7f6b2e078e021e2d757f159b7242e3336bfa6.png';
 import { ImageWithFallback } from './shared/ImageWithFallback';
 
@@ -12,7 +12,9 @@ export function SecondTitlePage() {
         style={{
           backgroundImage: `url(${marbleBackground})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          zIndex: 0
         }}
       />
 
@@ -21,11 +23,18 @@ export function SecondTitlePage() {
         {/* Upper Content Section */}
         <div className="flex flex-col items-center justify-start px-16 pt-6 pb-6 gap-4">
           {/* Logo */}
-          <div className="mb-6">
+          <div className="mb-6" style={{ 
+            background: 'white',
+            mixBlendMode: 'multiply',
+            display: 'inline-block'
+          }}>
             <img 
               src={logoImage} 
               alt="Nostrano - Culinary Redefined" 
               className="w-64 h-auto"
+              style={{ 
+                display: 'block'
+              }}
             />
           </div>
 
