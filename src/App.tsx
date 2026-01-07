@@ -4,6 +4,11 @@ import { SecondTitlePage } from './components/SecondTitlePage';
 import { CrostinisMenuPage } from './components/CrostinisMenuPage';
 import { SkewersMenuPage } from './components/SkewersMenuPage';
 import { SandwichesMenuPage } from './components/SandwichesMenuPage';
+import { CanapeIntroPage } from './components/CanapeIntroPage';
+import { CanapeMenuPage } from './components/CanapeMenuPage';
+import { CanapeSeaPage } from './components/CanapeSeaPage';
+import { CanapeVegetarianPage } from './components/CanapeVegetarianPage';
+import { CanapeClosingPage } from './components/CanapeClosingPage';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './components/ui/button';
 
@@ -15,7 +20,12 @@ export default function App() {
     { component: SecondTitlePage, name: 'Second Title Page' },
     { component: SandwichesMenuPage, name: 'Sandwiches Menu' },
     { component: CrostinisMenuPage, name: 'Crostinis Menu' },
-    { component: SkewersMenuPage, name: 'Skewers Menu' }
+    { component: SkewersMenuPage, name: 'Skewers Menu' },
+    { component: CanapeIntroPage, name: 'Canapés Introduction' },
+    { component: CanapeMenuPage, name: 'Canapés - From Land' },
+    { component: CanapeSeaPage, name: 'Canapés - From Sea' },
+    { component: CanapeVegetarianPage, name: 'Canapés - Garden & Sweet' },
+    { component: CanapeClosingPage, name: 'Service & Contact' }
   ];
 
   const nextPage = () => {
@@ -46,7 +56,7 @@ export default function App() {
           <ChevronLeft className="size-4 mr-2" />
           Previous
         </Button>
-        
+
         <div className="text-white px-4">
           Page {currentPage + 1} of {pages.length}: {pages[currentPage].name}
         </div>
@@ -68,9 +78,8 @@ export default function App() {
           <button
             key={index}
             onClick={() => setCurrentPage(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              index === currentPage ? 'bg-white w-8' : 'bg-neutral-600'
-            }`}
+            className={`w-2 h-2 rounded-full transition-all ${index === currentPage ? 'bg-white w-8' : 'bg-neutral-600'
+              }`}
             aria-label={`Go to page ${index + 1}`}
           />
         ))}
