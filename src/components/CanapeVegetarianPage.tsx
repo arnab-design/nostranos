@@ -50,9 +50,9 @@ export function CanapeVegetarianPage() {
     return (
         <div className="w-full h-full relative overflow-hidden bg-white">
             {/* Content with 32px padding all around */}
-            <div className="w-full h-full flex" style={{ padding: '32px' }}>
+            <div className="w-full h-full flex" style={{ padding: '32px', gap: '32px' }}>
                 {/* Left Column - Text (70%) */}
-                <div className="flex-1 flex flex-col pr-8" style={{ width: '70%' }}>
+                <div className="flex-1 flex flex-col" style={{ width: '70%' }}>
                     {/* Section Heading */}
                     <h2 style={{
                         fontFamily: '"Cormorant Garamond", Georgia, serif',

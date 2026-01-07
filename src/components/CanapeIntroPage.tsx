@@ -39,7 +39,7 @@ export function CanapeIntroPage() {
             fontWeight: 300,
             marginBottom: '8px'
           }}>
-            CANAPÉS
+            CANAPÉ SERVICE
           </h1>
 
           {/* Italic Subheading */}
